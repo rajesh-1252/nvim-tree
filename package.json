@@ -1,0 +1,127 @@
+{
+  "name": "nvim-tree",
+  "displayName": "nerd tree",
+  "publisher": "masira1327",
+  "icon": "public/logo2.png",
+  "keywords": [
+    "nvim-tree",
+    "nerd tree",
+    "vim",
+    "nvim",
+    "vscode vim",
+    "neovim",
+    "neovim tree",
+    "filesExplorer shortcut"
+  ],
+  "description": "",
+  "version": "0.0.4",
+  "engines": {
+    "vscode": "^1.81.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./dist/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "nerd-tree.helloWorld",
+        "title": "Hello World"
+      }
+    ],
+    "keybindings": [
+      {
+        "key": "a",
+        "command": "explorer.newFile",
+        "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !inputFocus"
+      },
+      {
+        "key": "shift+a",
+        "command": "explorer.newFolder",
+        "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !inputFocus"
+      },
+      {
+        "key": "s",
+        "command": "explorer.openToSide",
+        "when": "explorerViewletFocus && explorerViewletVisible && !inputFocus"
+      },
+      {
+        "key": "f",
+        "command": "explorer.newFolder",
+        "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !inputFocus"
+      },
+      {
+        "key": "y",
+        "command": "filesExplorer.copy",
+        "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !inputFocus"
+      },
+      {
+        "key": "x",
+        "command": "filesExplorer.cut",
+        "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !inputFocus"
+      },
+      {
+        "key": "p",
+        "command": "filesExplorer.paste",
+        "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceReadonly && !inputFocus"
+      },
+      {
+        "key": "r",
+        "command": "renameFile",
+        "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+      },
+      {
+        "key": "d",
+        "command": "moveFileToTrash",
+        "when": "explorerResourceMoveableToTrash && explorerViewletVisible && filesExplorerFocus && !explorerResourceReadonly && !inputFocus"
+      },
+      {
+        "key": "c",
+        "command": "workbench.files.action.collapseExplorerFolders",
+        "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceReadonly && !inputFocus"
+      },
+      {
+        "key": "t",
+        "command": "openInTerminal",
+        "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !inputFocus"
+      },
+      {
+        "key": "u",
+        "command": "copyFilePath",
+        "when": "explorerViewletFocus && explorerViewletVisible && !inputFocus"
+      },
+      {
+        "key": "i",
+        "command": "copyRelativeFilePath",
+        "when": "explorerViewletFocus && explorerViewletVisible && !inputFocus"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run package",
+    "compile": "webpack",
+    "watch": "webpack --watch",
+    "package": "webpack --mode production --devtool hidden-source-map",
+    "compile-tests": "tsc -p . --outDir out",
+    "watch-tests": "tsc -p . -w --outDir out",
+    "pretest": "npm run compile-tests && npm run compile && npm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "node ./out/test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.81.0",
+    "@types/mocha": "^10.0.1",
+    "@types/node": "16.x",
+    "@typescript-eslint/eslint-plugin": "^6.4.1",
+    "@typescript-eslint/parser": "^6.4.1",
+    "eslint": "^8.47.0",
+    "glob": "^10.3.3",
+    "mocha": "^10.2.0",
+    "typescript": "^5.1.6",
+    "ts-loader": "^9.4.4",
+    "webpack": "^5.88.2",
+    "webpack-cli": "^5.1.4",
+    "@vscode/test-electron": "^2.3.4"
+  }
+}
