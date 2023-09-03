@@ -14,7 +14,11 @@
     "filesExplorer shortcut"
   ],
   "description": "",
-  "version": "0.0.4",
+  "version": "0.0.6",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rajesh-1252/nvim-tree.git"
+  },
   "engines": {
     "vscode": "^1.81.0"
   },
@@ -95,6 +99,14 @@
         "key": "i",
         "command": "copyRelativeFilePath",
         "when": "explorerViewletFocus && explorerViewletVisible && !inputFocus"
+      },
+      {
+        "key": "ctrl+h",
+        "command": "workbench.view.explorer"
+      },
+      {
+        "key": "ctrl+l",
+        "command": "workbench.action.focusActiveEditorGroup"
       }
     ]
   },
