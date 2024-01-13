@@ -101,89 +101,12 @@
         "when": "explorerViewletFocus && explorerViewletVisible && !inputFocus"
       },
       {
-        "key": "ctrl+g",
+        "key": "ctrl+h",
         "command": "workbench.view.explorer"
       },
       {
         "key": "ctrl+l",
         "command": "workbench.action.focusActiveEditorGroup"
-      },
-      {
-        "key": "ctrl+y",
-        "command": "workbench.files.action.focusFilesExplorer",
-        "when": "editorFocus"
-      },
-      {
-        "key": "ctrl+j",
-        "command": "workbench.action.terminal.focus",
-        "when": "!suggestWidgetVisible && editorFocus"
-      },
-      {
-        "key": "ctrl+k",
-        "command": "workbench.action.focusActiveEditorGroup",
-        "when": "!suggestWidgetVisible"
-      },
-      {
-        "key": "ctrl+k",
-        "command": "selectPrevSuggestion",
-        "when": "editorTextFocus && suggestWidgetVisible"
-      },
-      {
-        "key": "ctrl+x",
-        "command": "workbench.action.terminal.kill"
-      },
-      {
-        "key": "ctrl+shift+j",
-        "command": "workbench.action.terminal.focusNext"
-      },
-      {
-        "key": "ctrl+shift+k",
-        "command": "workbench.action.terminal.focusPrevious"
-      },
-      {
-        "key": "shift+alt+j",
-        "command": "workbench.action.terminal.scrollDown",
-        "when": "terminalFocus && terminalProcessSupported"
-      },
-      {
-        "key": "shift+alt+k",
-        "command": "workbench.action.terminal.scrollUp",
-        "when": "terminalFocus && terminalProcessSupported"
-      },
-      {
-        "key": "alt+j",
-        "command": "workbench.action.terminal.scrollDownPage",
-        "when": "terminalFocus && terminalProcessSupported"
-      },
-      {
-        "key": "alt+k",
-        "command": "workbench.action.terminal.scrollUpPage",
-        "when": "terminalFocus && terminalProcessSupported"
-      },
-      {
-        "key": "ctrl+j",
-        "command": "workbench.action.quickOpenNavigateNextInFilePicker",
-        "when": "inQuickOpen"
-      },
-      {
-        "key": "ctrl+k",
-        "command": "workbench.action.quickOpenNavigatePreviousInFilePicker",
-        "when": "inQuickOpen"
-      },
-      {
-        "key": "ctrl+o",
-        "command": "workbench.action.closeQuickOpen",
-        "when": "inQuickOpen"
-      },
-      {
-        "key": "alt+k",
-        "command": "editor.action.moveLinesUpAction",
-        "when": "editorFocus"
-      },
-      {
-        "key": "alt+j",
-        "command": "editor.action.moveLinesDownAction",
-        "when": "editorFocus"
       }
     ]
   },
